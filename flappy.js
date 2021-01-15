@@ -5,21 +5,22 @@ function novoElemento(tagName, className) {
 }
 
 function Barreira(reversa = false) {
-  this.elemento = novoElemento("div", "barreira")
+  this.elemento = novoElemento('div', 'barreira')
 
-  const borda = novoElemento("div", "borda")
-  const corpo = novoElemento("div", "corpo")
+  const borda = novoElemento('div', 'borda')
+  const corpo = novoElemento('div', 'corpo')
   this.elemento.appendChild(reversa ? corpo : borda)
   this.elemento.appendChild(reversa ? borda : corpo)
 
-  this.setAltura = (altura) => (corpo.style.height = `${altura}px`)
+  this.setAltura = altura => corpo.style.height = `${altura}px`
 }
 
 // const b = new Barreira(true)
 // b.setAltura(300)
 // document.querySelector('[wm-flappy]').appendChild(b.elemento)
+
 function ParDeBarreiras(altura, abertura, x) {
-  this.elemento = novoElemento("div", "par-de-barreiras")
+  this.elemento = novoElemento('div', 'par-de-barreiras')
 
   this.superior = new Barreira(true)
   this.inferior = new Barreira(false)
@@ -51,7 +52,7 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
     new ParDeBarreiras(altura, abertura, largura + espaco * 2),
     new ParDeBarreiras(altura, abertura, largura + espaco * 3),
   ]
-  const deslocamento = 3
+  const deslocamento = 4
   this.animar = () => {
     this.pares.forEach(par => {
       par.setX(par.getX() - deslocamento)
@@ -62,7 +63,7 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
         par.sortearAbertura()
       }
 
-      const meio = largura / 2;
+      const meio = largura / 2
       const cruzouOMeio =
         par.getX() + deslocamento >= meio && par.getX() < meio
       if (cruzouOMeio) notificarPonto()
@@ -71,7 +72,7 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
 }
 
 function Passaro(alturaJogo) {
-  let voando = false;
+  let voando = false
 
   this.elemento = novoElemento('img', 'passaro')
   this.elemento.src = 'images/passaro.png'
@@ -82,7 +83,7 @@ function Passaro(alturaJogo) {
   // true or false para quando o usuário apertar em alguma tecla
   window.onkeydown = e => voando = true
   window.onkeyup = e => voando = false
-
+ 
   this.animar = () => {
     const novoY = this.getY() + (voando ? 8 : -5)
     const alturaMaxima = alturaJogo - this.elemento.clientHeight
@@ -123,6 +124,30 @@ function Progresso () {
 //   passaro.animar()
 // }, 20)
 
+function estaoSobrepostos(elementoA, elementoB) {
+    const a = elementoA.getBoundingClientRect()
+    const b = elementoB.getBoundingClientRect()
+
+    const horizontal = a.left + a.width >= b.left && b.left + b.width >= a.left
+
+    const vertical = a.top + a.height >= b.top && b.top + b.height >= a.top
+    return horizontal && vertical
+}
+
+function colidiu(passaro, barreiras) {
+    let colidiu = false
+    barreiras.pares.forEach(ParDeBarreiras => {
+        if (!colidiu) {
+            const superior = parDeBarreiras.superior.elemento
+            const inferior = parDeBarreiras.inferior.elemento
+            colidiu = estaoSobrepostos(passaro.elemento, superior)
+            || estaoSobrepostos(passaro.elemento, inferior)
+        }
+    })
+
+    return colidiu
+}
+
 
 function FlappyBird() {
     let pontos = 0
@@ -145,6 +170,10 @@ function FlappyBird() {
             const temporizador = setInterval(() => {
                 barreiras.animar()
                 passaro.animar()
+
+                if(colidiu(passaro, barreiras)) {
+                    clearInterval(temporizador)
+                }
             }, 20)
         }
 }
