@@ -59,4 +59,5 @@
     font-family: Pixel;
     font-size: 70px;
     color: white;
+    z-index:100;
 }
