@@ -28,6 +28,7 @@ function ParDeBarreiras(altura, abertura, x) {
   this.elemento.appendChild(this.superior.elemento)
   this.elemento.appendChild(this.inferior.elemento)
 
+  //função Math.random para sortear de forma aleatória a abertura de cada barreira
   this.sortearAbertura = () => {
     const alturaSuperior = Math.random() * (altura - abertura)
     const alturaInferior = altura - abertura - alturaSuperior
@@ -52,7 +53,7 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
     new ParDeBarreiras(altura, abertura, largura + espaco * 2),
     new ParDeBarreiras(altura, abertura, largura + espaco * 3),
   ]
-  const deslocamento = 4
+  const deslocamento = 3
   this.animar = () => {
     this.pares.forEach(par => {
       par.setX(par.getX() - deslocamento)
@@ -174,7 +175,7 @@ function FlappyBird() {
                 if(colidiu(passaro, barreiras)) {
                     clearInterval(temporizador)
                 }
-            }, 20)
+            }, 20) //milisegundos em que a imagem será animada
         }
 }
 
