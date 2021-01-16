@@ -14,7 +14,7 @@ function Barreira(reversa = false) {
 
   this.setAltura = altura => corpo.style.height = `${altura}px`
 }
-
+// teste estático setando a altura para testar a barreira
 // const b = new Barreira(true)
 // b.setAltura(300)
 // document.querySelector('[wm-flappy]').appendChild(b.elemento)
