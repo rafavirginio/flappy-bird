@@ -91,7 +91,7 @@ function Passaro(alturaJogo) {
 
     if (novoY <= 0) {
       this.setY(0)
-    } else if (novo >= alturaMaxima) {
+    } else if (novoY >= alturaMaxima) {
       this.setY(alturaMaxima)
     } else {
       this.setY(novoY)
