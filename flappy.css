@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+
 }
 
 @font-face {
@@ -7,13 +9,21 @@
   src: url("./fonts/Pixel.ttf");
 
 }
+.conteudo{
+  background-color: darkblue;
+}
+
+.conteudo h1{
+  text-align: center;
+  font-family: Pixel;
+}
 
 [wm-flappy] {
   position: relative;
   border: 5px solid dodgerblue;
   height: 500px;
   width: 1000px;
-  margin: 15px;
+  margin: auto;
   background-color: deepskyblue;
   overflow: hidden;
 }
