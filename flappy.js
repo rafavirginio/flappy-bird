@@ -51,7 +51,7 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
     new ParDeBarreiras(altura, abertura, largura),
     new ParDeBarreiras(altura, abertura, largura + espaco),
     new ParDeBarreiras(altura, abertura, largura + espaco * 2),
-    new ParDeBarreiras(altura, abertura, largura + espaco * 3),
+    new ParDeBarreiras(altura, abertura, largura + espaco * 3)
   ]
   const deslocamento = 3
   this.animar = () => {
@@ -137,7 +137,7 @@ function estaoSobrepostos(elementoA, elementoB) {
 
 function colidiu(passaro, barreiras) {
     let colidiu = false
-    barreiras.pares.forEach(ParDeBarreiras => {
+    barreiras.pares.forEach(parDeBarreiras => {
         if (!colidiu) {
             const superior = parDeBarreiras.superior.elemento
             const inferior = parDeBarreiras.inferior.elemento
