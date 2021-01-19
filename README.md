@@ -13,9 +13,9 @@
 
 ## Objetivo do Projeto
 
-O Objetivo deste projeto foi para fins didáticos.
+O objetivo deste projeto foi para fins didáticos.
 
-Claro que sempre existirá APIs mais aprimoradas e próprias para desenvolver jogos mas o Objetivo deste projeto é praticar a manipulação da DOM com o JavaScript, criando funções que manipulam tanto elementos no HTML quanto classes do CSS, a ideia é automatizar o sistema com objetos e funções construtoras para evitar escrever mais código no HTML, a cada vez que for criar um elemento de barreiras verdes no jogo.
+Claro que sempre existirá APIs mais aprimoradas e próprias para desenvolver jogos, mas o objetivo deste projeto é praticar a manipulação da DOM com o JavaScript, criando funções que manipulam tanto elementos no HTML quanto classes do CSS, uma função 'Math.random()' para gerar as barreiras de forma aleatória, deixando assim o jogo mais dinâmico. A ideia é automatizar o sistema com objetos e funções construtoras para evitar escrever mais código no HTML, a cada vez que for criar um elemento de barreiras verdes no jogo.
 
 ## ✔ Technologies
 
