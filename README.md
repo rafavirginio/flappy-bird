@@ -20,4 +20,4 @@ Claro que sempre existirá APIs mais aprimoradas e próprias para desenvolver jo
 - ✔ JavaScript
 
 
-Tenha um bom jogo <3
+Tenha um bom jogo ❤
