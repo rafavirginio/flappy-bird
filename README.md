@@ -1,5 +1,5 @@
 # flappy-bird
- Flappy Bird game developed with HTML, CSS, JS
+ Flappy Bird game developed with HTML, CSS, JS.
 
 ## Game Preview
 
