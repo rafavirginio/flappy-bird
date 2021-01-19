@@ -11,7 +11,7 @@
 
 - Ao colidir em alguma barreira verde dará 'Game Over', aperte 'F5' para reiniciar o game.
 
-- A cada barreira que o passáro passar ganha 1 ponto.
+- A cada barreira que o passáro passar, ganha 1 ponto.
 
 ## Objetivo do Projeto
 
