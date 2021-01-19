@@ -7,7 +7,7 @@
 
 ### Tutorial
 
-- Aperte qualquer tecla para fazer o pássaro voar, por padrão ele sempre estará caindo.
+- Pressione qualquer tecla para fazer o pássaro voar, por padrão ele sempre estará caindo.
 
 - Ao colidir em alguma barreira verde dará 'Game Over', aperte 'F5' para reiniciar o game.
 
