@@ -174,7 +174,7 @@ function FlappyBird() {
 
                 if(colidiu(passaro, barreiras)) {
                     clearInterval(temporizador)
-                    window.alert('Game Over, de F5 para reiniciar')
+                    window.alert('"Game Over", press F5 to restart the game')
                 }
             }, 20) //milisegundos em que a imagem será animada
         }
