@@ -5,11 +5,13 @@
 
 <img src="images/game-screen.gif">
 
-### Como jogar
+### Tutorial
 
 - Aperte qualquer tecla para fazer o pássaro voar, por padrão ele sempre estará caindo.
 
 - Ao colidir em alguma barreira verde dará 'Game Over', aperte 'F5' para reiniciar o game.
+
+- A cada barreira que o passáro passar ganha 1 ponto.
 
 ## Objetivo do Projeto
 
