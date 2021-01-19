@@ -7,8 +7,17 @@ Claro que sempre existirá APIs mais aprimoradas e próprias para desenvolver jo
 
 <img src="images/game-screen.gif">
 
+### Como jogar
+
+- Aperte qualquer tecla para fazer o pássaro voar, por padrão ele sempre estará caindo.
+
+- Ao colidir em alguma barreira verde dará 'Game Over', aperte 'F5' para reiniciar o game.
+
 ## ✔ Technologies
 
 - ✔ HTML
 - ✔ CSS
 - ✔ JavaScript
+
+
+Tenha um bom jogo <3
