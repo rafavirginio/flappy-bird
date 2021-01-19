@@ -5,7 +5,7 @@ Claro que sempre existirá APIs mais aprimoradas e próprias para desenvolver jo
 
 ## Game Preview
 
-<img src ="./images/game-screen.gif">
+<img src="images/game-screen.gif">
 
 ## ✔ Technologies
 
