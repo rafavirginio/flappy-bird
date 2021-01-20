@@ -100,11 +100,7 @@ function Passaro(alturaJogo) {
   this.setY(alturaJogo / 2)
 }
 
-
-
-
-
-
+//atualização de pontos
 function Progresso () {
    this.elemento = novoElemento('span', 'progresso')
    this.atualizarPontos = pontos => {
@@ -113,17 +109,6 @@ function Progresso () {
    this.atualizarPontos(0)
 }
 
-// const barreiras = new Barreiras(700, 1200, 200, 400)
-// const passaro = new Passaro(700)
-// const areaDoJogo = document.querySelector("[wm-flappy]")
-
-// areaDoJogo.appendChild(passaro.elemento)
-// areaDoJogo.appendChild(new Progresso().elemento)
-// barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
-// setInterval(() => {
-//   barreiras.animar()
-//   passaro.animar()
-// }, 20)
 
 function estaoSobrepostos(elementoA, elementoB) {
     const a = elementoA.getBoundingClientRect()
@@ -134,7 +119,7 @@ function estaoSobrepostos(elementoA, elementoB) {
     const vertical = a.top + a.height >= b.top && b.top + b.height >= a.top
     return horizontal && vertical
 }
-
+//colisão
 function colidiu(passaro, barreiras) {
     let colidiu = false
     barreiras.pares.forEach(parDeBarreiras => {
